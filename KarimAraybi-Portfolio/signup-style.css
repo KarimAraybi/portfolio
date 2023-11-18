@@ -1,0 +1,128 @@
+.radios{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.radio{
+    width: 20px;
+    height: 20px;
+}
+
+.genderLabel{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body{
+    background-color: rgb(27, 27, 30);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+}
+
+.container-title{
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    text-align: center;
+    background-color: #0CCA4A;
+}
+
+
+.section-content{
+    width: 550px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 12px;
+    background-color: #3d3d3d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    justify-content: center;
+    color: white;
+    
+}
+
+.signup-form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #0CCA4A;
+    color: white;
+}
+
+
+input{
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+    height: 35px;
+    width: 300px;
+}
+
+label{
+    font-size: large;
+}
+
+form{
+    margin: 0px;
+}
+
+a{
+    color: #0CCA4A;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #DCEDFF;
+    text-decoration: none;
+}
+
+.clear-btn{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clear-btn:hover{
+    background-color: #0CCA4A;
+    color: white;
+}
+
