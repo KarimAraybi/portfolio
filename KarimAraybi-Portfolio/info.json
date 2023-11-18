@@ -1,14 +1,6 @@
 {
-    "testing": {
-        "password": "testing",
-        "sex": "on"
-    },
-    "john": {
-        "password": "pass",
-        "sex": "on"
-    },
-    "a": {
-        "password": "a",
+    "karim": {
+        "password": "karim",
         "sex": "on"
     }
 }
