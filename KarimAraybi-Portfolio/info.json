@@ -1,0 +1,14 @@
+{
+    "testing": {
+        "password": "testing",
+        "sex": "on"
+    },
+    "john": {
+        "password": "pass",
+        "sex": "on"
+    },
+    "a": {
+        "password": "a",
+        "sex": "on"
+    }
+}

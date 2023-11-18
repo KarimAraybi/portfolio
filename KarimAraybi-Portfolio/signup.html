@@ -34,7 +34,7 @@
                         <label for="sex" class="genderLabel" name="female">Female</label>
                     </div>
                     <br>
-                    <button type="submit" class="login-btn">Sign Up</button>
+                    <button type="button" class="login-btn" onclick="SignUp()">Sign Up</button>
                     <br>
                     <button type="button" class="clear-btn" onclick="ClearForm()">Clear</button>
                     <br>
@@ -45,6 +45,32 @@
     </div>
 
     <script>
+        function SignUp(){
+            var mForm=document.querySelector("form[name='signup-form']");
+            var username=mForm.elements["username"].value;
+            var password=mForm.elements["password"].value;
+            var confPassword=mForm.elements["confPassword"].value;
+            var sex=mForm.elements["sex"].value;
+
+            console.log("username:"+username);
+            console.log("pass:"+password);
+            console.log("confPass:"+confPassword);
+            console.log("sex:"+sex);
+        
+            if(username==""){
+                alert("Please enter a username.");
+            }
+            else if ((password!=confPassword)||(confPassword==""))
+                alert("Passwords must be equal.");
+
+            else if(sex==""){
+                alert("Choose a gender.");
+                
+            }
+
+            else
+                mForm.submit();        
+        }
         function ClearForm() {
             var mForm = document.querySelector("form[name='signup-form']");
             mForm.elements["username"].value = "";
