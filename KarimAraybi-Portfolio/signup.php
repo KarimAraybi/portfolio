@@ -3,6 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $sex = $_POST["sex"];
+    $fullname = $_POST["fullName"];
+    $dob = $_POST["dob"];
 
     $jsonData = file_get_contents('info.json');
     $users = json_decode($jsonData, true);
@@ -17,7 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $users[$username] = [
         "password" => $password,
-        "sex" => $sex
+        "sex" => $sex,
+        "fullName" => $fullname,
+        "dob" => $dob
 
     ];
     
