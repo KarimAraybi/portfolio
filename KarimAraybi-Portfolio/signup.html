@@ -1,0 +1,84 @@
+<html>
+    
+<head>
+    <title>KarimAraybi-SignUp</title>
+    <link rel="stylesheet" href="signup-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="page-content">
+        <div class="section">
+            <div class="section-content">
+                <div class="container-title">
+                    SignUp
+                </div>
+
+                <form action="signup.php" class="signup-form" method="post" name="signup-form">
+                    <br>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    <br>
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" name="confPassword" id="confPassword">
+                    <br>
+                    <label for="sex">Gender:</label>
+                    <div class="radios">
+                        <input type="radio" name="sex" id="male" class="radio">
+                        <label for="sex" class="genderLabel" name="male">Male</label>
+                        <input type="radio" name="sex" id="female" class="radio">
+                        <label for="sex" class="genderLabel" name="female">Female</label>
+                    </div>
+                    <br>
+                    <button type="button" class="login-btn" onclick="SignUp()">Sign Up</button>
+                    <br>
+                    <button type="button" class="clear-btn" onclick="ClearForm()">Clear</button>
+                    <br>
+                    <span>Already have an account? <a href="index.html">Log In!</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function SignUp(){
+            var mForm=document.querySelector("form[name='signup-form']");
+            var username=mForm.elements["username"].value;
+            var password=mForm.elements["password"].value;
+            var confPassword=mForm.elements["confPassword"].value;
+            var sex=mForm.elements["sex"].value;
+
+            console.log("username:"+username);
+            console.log("pass:"+password);
+            console.log("confPass:"+confPassword);
+            console.log("sex:"+sex);
+        
+            if(username==""){
+                alert("Please enter a username.");
+            }
+            else if ((password!=confPassword)||(confPassword==""))
+                alert("Passwords must be equal.");
+
+            else if(sex==""){
+                alert("Choose a gender.");
+                
+            }
+
+            else
+                mForm.submit();        
+        }
+        function ClearForm() {
+            var mForm = document.querySelector("form[name='signup-form']");
+            mForm.elements["username"].value = "";
+            mForm.elements["password"].value = "";
+            mForm.elements["confPassword"].value = "";
+            mForm.elements["sex"].value = "";
+        }
+    </script>
+</body>
+
+</html>
