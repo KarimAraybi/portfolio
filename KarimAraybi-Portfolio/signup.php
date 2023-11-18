@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($users[$username])) {
 
-        header("Location: signup_error.php");
+        header("Location: error.php");
         exit();
     }
 

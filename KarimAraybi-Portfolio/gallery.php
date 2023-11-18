@@ -15,6 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["logout"])) {
     exit();
 }
 
+$galleryJson = file_get_contents('gallery.json');
+$gallery = json_decode($galleryJson, true);
 ?>
 
 <html>
@@ -60,27 +62,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["logout"])) {
         </div>
 
         <div class="container">
-            
-
+        <?php foreach ($gallery as $image): ?>
             <div class="img-frame">
-                
-                <img src="image1.jpg" class="my-img" tabindex="0" >
-                <img src="image1.jpg" class="bigImg" id="bigIMG1">
-                
+                <img src="<?php echo $image; ?>" class="my-img" tabindex="0">
+                <img src="<?php echo $image; ?>" class="bigImg" id="bigIMG<?php echo substr($image, -5, 1); ?>">
             </div>
-            <div class="img-frame">
-                
-                <img src="image2.jpg" class="my-img" tabindex="0" >
-                <img src="image2.jpg" class="bigImg" id="bigIMG2">
-                
-            </div>
-            <div class="img-frame">
-            
-                <img src="image3.jpg" class="my-img"  tabindex="0">
-                <img src="image3.jpg" class="bigImg" id="bigIMG3">
-                
-            </div>
-
-        </div>
-    </body>
+        <?php endforeach; ?>
+    </div>
+</body>
 </html>
